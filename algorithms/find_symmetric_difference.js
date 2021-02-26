@@ -7,16 +7,24 @@ Symmetric difference is a binary operation, which means it operates on only two 
 */
 
 function sym(args) {
-  let arrgs = Array.prototype.slice.call(arguments);
-  let mergeArrays = arrgs[0].concat(arrgs[1])
-  console.log(mergeArrays)
-  let symmetricArr = []
-    mergeArrays.forEach(function(i){
-      if(!(arrgs[0].includes(i) && arrgs[1].includes(i))){
-        symmetricArr.push(i)
-      }
-    })
-    return symmetricArr
-  }
 
-sym([1, 2, 3], [5, 2, 1, 4]);
+    let arrays = Array.prototype.slice.call(arguments);
+    let mergeArr = []
+    let symmetricArr = []
+    arrays.forEach((arr) => mergeArr = mergeArr.concat(arr));
+
+
+    for (let i = 0; i < arrays.length; i++) {
+        mergeArr.forEach(function(item) {
+            if (!arrays[i].includes(item)) {
+                symmetricArr.push(item)
+            }
+        })
+    }
+    let setArr = new Set(symmetricArr)
+    setArr = Array.from(setArr)
+    return setArr
+}
+
+
+sym([1, 2, 3, 3], [5, 2, 1, 4]);
