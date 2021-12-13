@@ -1,3 +1,3 @@
-# coding-interview-prep-fcc
+# Challenges: Algorithms(FCC) 💠
 
-Repository containing my solutions of algorithms, data structures, and mathematics challenges from FreeCodeCamp - Coding Prep.
+Repository with algorithms to solve different challenges about mathematics and data structures using javascript.
